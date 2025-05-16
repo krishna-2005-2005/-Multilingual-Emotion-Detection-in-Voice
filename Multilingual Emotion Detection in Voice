@@ -1,0 +1,76 @@
+
+
+---
+
+# 📘 Multilingual Emotion Detection in Voice
+
+## 📌 Overview
+
+This project focuses on detecting emotions from voice data across multiple languages using machine learning techniques. It leverages audio signal processing and deep learning to classify emotions based on speech signals. The workflow includes data preprocessing, feature extraction (MFCCs), and training a neural network for classification.
+
+## 🧰 Dependencies
+
+The notebook uses the following Python libraries:
+
+* `librosa` – for audio processing
+* `pandas`, `numpy` – for data manipulation
+* `matplotlib`, `seaborn` – for visualization
+* `scikit-learn` – for preprocessing and evaluation
+* `tensorflow` / `keras` – for model training and evaluation
+* `os`, `glob`, `pickle` – for file handling
+
+Make sure to install these packages before running the notebook.
+
+## 🗂️ Dataset
+
+* Multiple datasets are used, possibly including:
+
+  * **CREMA-D**
+  * **RAVDESS**
+  * **TESS**
+* The datasets are processed to extract:
+
+  * **Mel-frequency cepstral coefficients (MFCCs)**
+  * **Chroma**
+  * **Mel Spectrogram**
+
+Each audio sample is labeled with the emotion it expresses.
+
+## 🧪 Workflow
+
+1. **Data Loading**
+   Audio files are loaded and iterated through to extract features.
+
+2. **Feature Extraction**
+   MFCCs, chroma, and mel-spectrogram features are extracted using `librosa`.
+
+3. **Label Encoding and Train-Test Split**
+   The emotion labels are encoded using `LabelEncoder`, and the data is split into training and testing sets.
+
+4. **Model Architecture**
+   A sequential neural network is built using Keras. Typically includes:
+
+   * Dense layers with ReLU
+   * Dropout layers
+   * Final softmax layer for classification
+
+5. **Model Training**
+   The model is compiled and trained with categorical crossentropy loss and an optimizer like Adam.
+
+6. **Evaluation**
+   The model is evaluated using:
+
+   * Accuracy
+   * Confusion matrix
+   * Classification report
+
+## 📊 Output
+
+* Training/validation accuracy and loss curves
+* Confusion matrix to show performance per emotion
+* Overall classification accuracy
+
+
+---
+
+Would you like me to extract the full code, specific sections, or generate a full README file for GitHub from this notebook?
